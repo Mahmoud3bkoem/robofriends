@@ -32,14 +32,13 @@ class App extends Component {
         })
 
         // This if statement is here coz irl the response has some sort of delay so it shows "loading" instead of nothing.. 
-        if (!robots.length) {
-            return (
+        return !robots.length ?
+            (
                 <h1 className="tc f1" 
                 style={{color: '#0ccac4'}}
-                >Loading...</h1>
-            )
-        } else {
-            return (
+                >Loading...</h1> 
+            ):
+            (
                 <div className="tc">
                     <h1 className="f1" 
                         style={{color: '#0ccac4'}}
@@ -51,7 +50,6 @@ class App extends Component {
                     </Scroll>
                 </div>
             );
-        }
     }
 }
 
