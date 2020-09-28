@@ -9,17 +9,17 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            robots: [], // in the newest version of this App this should be an empty array --> robots:[],
+            robots: robots, // in the newest version of this App this should be an empty array --> robots:[],
             searchfield: '',
         }
     }
 
     // Newest App: There should be another mehtod here like this:
-    componentDidMount() {
-        fetch('https://my-json-server.typicode.com/Mahmoud3bkoem/robofriends') // This URL is just an ex. means the place where u want to grab the data from..
-        .then(response => response.json())
-        .then(users => {this.setState({ robots: users })});
-    }
+    // componentDidMount() {
+    //     fetch('https://my-json-server.typicode.com/Mahmoud3bkoem/robofriends') // This URL is just an ex. means the place where u want to grab the data from..
+    //     .then(response => response.json())
+    //     .then(users => {this.setState({ robots: users })});
+    // }
 
     onSearchChange = (event) => {
         this.setState({ searchfield: event.target.value });
